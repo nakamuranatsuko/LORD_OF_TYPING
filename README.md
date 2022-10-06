@@ -1,0 +1,1 @@
+# LORD_OF_TYPING
