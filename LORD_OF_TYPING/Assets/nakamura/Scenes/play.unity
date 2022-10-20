@@ -236,8 +236,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
+  m_sharedMaterial: {fileID: 7585331949411177344, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
-  m_sharedMaterial: {fileID: -636908125486746921, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
+  m_sharedMaterial: {fileID: 7585331949411177344, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
-  m_sharedMaterial: {fileID: -636908125486746921, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
+  m_sharedMaterial: {fileID: 7585331949411177344, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1027,6 +1027,8 @@ MonoBehaviour:
   kanjiText: {fileID: 1723899830}
   huriganaText: {fileID: 1461262180}
   _timeInterval: 1
+  num: 0
+  textLen: 201
 --- !u!1 &1897490395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,8 +1194,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Enter text...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
+  m_sharedMaterial: {fileID: 7585331949411177344, guid: cd6889ac5ab7fd648a141597d8880bc8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
