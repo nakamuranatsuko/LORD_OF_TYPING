@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
 public class time : MonoBehaviour
 {
+    public GameObject timeUp;
+
+    void Start()
+    {
+        timeUp = GameObject.Find("GameObject");
+    }
 
     void Update()
     {
-        transform.Rotate(new Vector3(0, 0, -1.0f));
+        if (timeUp.GetComponent<timer>().isTimeUp == false)
+        {
+            transform.Rotate(new Vector3(0, 0, -0.025f));
+        }
     }
 }
