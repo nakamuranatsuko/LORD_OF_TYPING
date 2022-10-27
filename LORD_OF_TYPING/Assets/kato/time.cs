@@ -15,7 +15,7 @@ public class time : MonoBehaviour
     {
         if (timeUp.GetComponent<timer>().isTimeUp == false)
         {
-            transform.Rotate(new Vector3(0, 0, -0.025f));
+            transform.Rotate(new Vector3(0, 0, -0.0154f));
         }
     }
 }
