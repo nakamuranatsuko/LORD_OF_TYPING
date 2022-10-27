@@ -11,12 +11,12 @@ public class inputField_Comp : MonoBehaviour
     [SerializeField] public TextMeshProUGUI kanjiText;
     [SerializeField] public TextMeshProUGUI huriganaText;
 
-    public int num = 0;
-    public int textLen = 201;
-    public int flg = 0;
-    public int t_flg = 0;
-    public int rnd = 0;
-    public int firstflg = 0;
+    public int num = 0;//使用した単語の数
+    public int textLen = 201;//CSV内にある単語の数
+    public int rnd = 0;//乱数用
+    public int flg = 0;//文字比較管理用
+    public int t_flg = 0;//乱数生成管理用
+    public int firstflg = 0;//始めの乱数管理用
 
     public string input;
     public int inputLen = 0;
@@ -35,40 +35,38 @@ public class inputField_Comp : MonoBehaviour
             //表示
             kanjiText.text = CSVReader.csvDatas[rnd][1];
             huriganaText.text = CSVReader.csvDatas[rnd][2];
-            firstflg = 1;
+
+            firstflg = 1;//無効にする
             Field.Select();//フォーカスする
         }
-        do
+
+        if (t_flg == 1)
         {
-            if (t_flg == 1)
-            {
-                //ランダム生成
-                rnd = Random.Range(1, wordLen);
-                //表示
-                kanjiText.text = CSVReader.csvDatas[rnd][1];
-                huriganaText.text = CSVReader.csvDatas[rnd][2];
-                t_flg = 0;
-            }
+            //ランダム生成
+            rnd = Random.Range(1, wordLen);
+            //表示
+            kanjiText.text = CSVReader.csvDatas[rnd][1];
+            huriganaText.text = CSVReader.csvDatas[rnd][2];
 
-            flg = KanaComp(rnd);
-            //文字比較があっていれば
-            if (flg == 1)
+            t_flg = 0;//ランダム生成を無効にする
+        }
+        flg = KanaComp(rnd);
+        //文字比較があっていれば
+        if (flg == 1)
+        {
+            //rndの言葉が上書きされる(消される)
+            for (int i = 1; i < wordLen - 1; i++)
             {
-                //rndの言葉が上書きされる(消される)
-                for (int i = 1; i < wordLen - 1; i++)
+                if (i >= rnd)
                 {
-                    if (i >= rnd)
-                    {
-                        CSVReader.csvDatas[i][1] = CSVReader.csvDatas[i + 1][1];
-                        CSVReader.csvDatas[i][2] = CSVReader.csvDatas[i + 1][2];
-                    }
+                    CSVReader.csvDatas[i][1] = CSVReader.csvDatas[i + 1][1];
+                    CSVReader.csvDatas[i][2] = CSVReader.csvDatas[i + 1][2];
                 }
-                num++;
-                t_flg = 1;
-                Field.GetComponent<TMP_InputField>().text = "";//空白にする
             }
-
-        } while (flg == 1);
+            num++;
+            t_flg = 1;//ランダム生成を有効にする
+            Field.GetComponent<TMP_InputField>().text = "";//空白にする
+        }
 
         if (wordLen == 0) UnityEditor.EditorApplication.isPaused = true;//一時停止
     }
