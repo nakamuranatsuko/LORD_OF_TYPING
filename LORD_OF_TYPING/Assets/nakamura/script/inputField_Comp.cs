@@ -5,6 +5,7 @@ using System.IO;
 using TMPro;
 using System.Text;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class inputField_Comp : MonoBehaviour
 {
@@ -26,49 +27,53 @@ public class inputField_Comp : MonoBehaviour
 
     void Update()
     {
-        int wordLen = textLen - num;
-
-        if(firstflg == 0)
+        if (countDown.isTimeUp == false)//タイムアップじゃなければ
         {
-            //ランダム生成
-            rnd = Random.Range(1, textLen);
-            //表示
-            kanjiText.text = CSVReader.csvDatas[rnd][1];
-            huriganaText.text = CSVReader.csvDatas[rnd][2];
+            int wordLen = textLen - num;
 
-            firstflg = 1;//無効にする
-            Field.Select();//フォーカスする
-        }
-
-        if (t_flg == 1)
-        {
-            //ランダム生成
-            rnd = Random.Range(1, wordLen);
-            //表示
-            kanjiText.text = CSVReader.csvDatas[rnd][1];
-            huriganaText.text = CSVReader.csvDatas[rnd][2];
-
-            t_flg = 0;//ランダム生成を無効にする
-        }
-
-        flg = KanaComp(rnd);
-
-        //文字比較があっていれば
-        if (flg == 1)
-        {
-            //rndの言葉が上書きされる(消される)
-            for (int i = 1; i < wordLen - 1; i++)
+            if (firstflg == 0)
             {
-                if (i >= rnd)
-                {
-                    CSVReader.csvDatas[i][1] = CSVReader.csvDatas[i + 1][1];
-                    CSVReader.csvDatas[i][2] = CSVReader.csvDatas[i + 1][2];
-                }
+                //ランダム生成
+                rnd = Random.Range(1, textLen);
+                //表示
+                kanjiText.text = CSVReader.csvDatas[rnd][1];
+                huriganaText.text = CSVReader.csvDatas[rnd][2];
+
+                firstflg = 1;//無効にする
+                Field.Select();//フォーカスする
             }
-            num++;
-            t_flg = 1;//ランダム生成を有効にする
-            Field.GetComponent<TMP_InputField>().text = "";//空白にする
+
+            if (t_flg == 1)
+            {
+                //ランダム生成
+                rnd = Random.Range(1, wordLen);
+                //表示
+                kanjiText.text = CSVReader.csvDatas[rnd][1];
+                huriganaText.text = CSVReader.csvDatas[rnd][2];
+
+                t_flg = 0;//ランダム生成を無効にする
+            }
+
+            flg = KanaComp(rnd);//文字比較
+
+            //文字比較があっていれば
+            if (flg == 1)
+            {
+                //rndの言葉が上書きされる(消される)
+                for (int i = 1; i < wordLen - 1; i++)
+                {
+                    if (i >= rnd)
+                    {
+                        CSVReader.csvDatas[i][1] = CSVReader.csvDatas[i + 1][1];
+                        CSVReader.csvDatas[i][2] = CSVReader.csvDatas[i + 1][2];
+                    }
+                }
+                num++;
+                t_flg = 1;//ランダム生成を有効にする
+                Field.GetComponent<TMP_InputField>().text = "";//空白にする
+            }
         }
+        else StartCoroutine("TimeUp");//コルーチンの実行
 
     }
 
@@ -96,5 +101,12 @@ public class inputField_Comp : MonoBehaviour
             }
         }
         return kanaflg;
+    }
+
+    private IEnumerator TimeUp()
+    {
+        //3秒待つ
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("result", LoadSceneMode.Single);
     }
 }
