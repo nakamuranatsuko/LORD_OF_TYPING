@@ -15,7 +15,7 @@ public class inputField_Comp : MonoBehaviour
     public int num = 0;//使用した単語の数
     public int textLen = 201;//CSV内にある単語の数
     public int rnd = 0;//乱数用
-    public int flg = 0;//文字比較管理用
+    public static int flg = 0;//文字比較管理用
     public int t_flg = 0;//乱数生成管理用
     public int firstflg = 0;//始めの乱数管理用
 
@@ -74,7 +74,6 @@ public class inputField_Comp : MonoBehaviour
             }
         }
         else StartCoroutine("TimeUp");//コルーチンの実行
-
     }
 
     public void OnValueChanged()//リアルタイムで文字の取得
