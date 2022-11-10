@@ -18,8 +18,8 @@ public class inputField_Comp : MonoBehaviour
     public int t_flg = 0;//乱数生成管理用
     public int firstflg = 0;//始めの乱数管理用
 
-    public string input;
-    public int inputLen = 0;
+    public string input;//入力された文字
+    public int inputLen = 0;//入力された文字の長さ
 
     // InputFieldのText参照用
     public TMP_InputField Field;
@@ -50,7 +50,9 @@ public class inputField_Comp : MonoBehaviour
 
             t_flg = 0;//ランダム生成を無効にする
         }
+
         flg = KanaComp(rnd);
+
         //文字比較があっていれば
         if (flg == 1)
         {
@@ -68,7 +70,6 @@ public class inputField_Comp : MonoBehaviour
             Field.GetComponent<TMP_InputField>().text = "";//空白にする
         }
 
-        if (wordLen == 0) UnityEditor.EditorApplication.isPaused = true;//一時停止
     }
 
     public void OnValueChanged()//リアルタイムで文字の取得
