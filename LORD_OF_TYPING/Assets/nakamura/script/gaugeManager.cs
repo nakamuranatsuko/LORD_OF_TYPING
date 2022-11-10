@@ -16,9 +16,9 @@ public class gaugeManager : MonoBehaviour
         if(time <= 0.0)
         {
             time = 1.0f;
-            if (inputField_Comp.flg == 1) gaugeManager.gaugeTime += 5;//ƒQ[ƒW‚ª5‘‚¦‚é
             gaugeManager.gaugeTime -= 1;//ƒQ[ƒW‚ª1Œ¸‚é
         }
+        if (inputField_Comp.flg == 1) gaugeManager.gaugeTime += 5;//ƒQ[ƒW‚ª5‘‚¦‚é
         gauge.fillAmount = gaugeTime / 100.0f;//ƒQ[ƒW‚É”½‰f‚³‚¹‚é
     }
 }
