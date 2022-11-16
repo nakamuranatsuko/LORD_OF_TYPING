@@ -1,223 +1,221 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using System;
+//using UnityEngine.UI;
 
-public class syougou : MonoBehaviour
-{
-    void Start()
-    {
-       
-    }
+//public class syougou : MonoBehaviour
+//{
+//    void Start()
+//    {
 
-   
+//    }
 
-void Update()
-    {
-        int point = 0;
+//    void Update(int A, B, C, D, S)
+//    {
+//        int point = 0;
 
-        if (point = 0 < 5000)
-        {
-            D;
-        }
+//        if (point == 5000)
+//        {
+//            for (int i = 0; i < 1; i++)
+//            {
+//                D = Random.Range(1, 9);
+//                D‚ÌÌ†‚P`‚W
+//                switch (D)
+//                {
+//                    case 1:
+//                        return "–ÚŒ‚ŽÒ";
 
-        if (point = 5000 < 10000)
-        {
-            C;
-        }
+//                    case 2:
+//                        return "V¯";
 
-        if (point = 10000 < 15000)
-        {
-            B;
-        }
+//                    case 3:
+//                        return "•š•º";
 
-        if (point = 15000 < 20000)
-        {
-            A;
-        }
+//                    case 4:
+//                        return "Øl";
 
-        if (point = 20000 < 25000)
-        {
-            S;
-        }
+//                    case 5:
+//                        return "’T–KŽÒ";
 
- //A‚ÌÌ†‚P`‚P‚R
-    public int A = 0;
-A = Random.Range(1, 14);
-switch (A)
-{
-    case 1:
-        return "—EŽÒ";
+//                    case 6:
+//                        return "ŽáŽÒ";
 
-    case 2:
-        return "’´‰zŽÒ";
+//                    case 7:
+//                        return "V•Ä";
 
-    case 3:
-        return "Œ«ŽÒ";
+//                    case 8:
+//                        return "—ë";
+//                }
+//            }
+//        }
 
-    case 4:
-        return "Œ•¹";
+//        if (point == 10000)
+//        {
+//            for (int i = 0; i < 1; i++)
+//            {
+//                C = Random.Range(1, 11);
+//                C‚ÌÌ†‚P`‚P‚O
+//                switch (C)
+//                {
+//                    case 1:
+//                        return "’§íŽÒ";
 
-    case 5:
-        return "’²’âŽÒ";
+//                    case 2:
+//                        return "ŠwŽÒ";
 
-    case 6:
-        return "¹‹RŽm";
+//                    case 3:
+//                        return "‹AŠÒŽÒ";
 
-    case 7:
-        return "‘Â“VŽg";
+//                    case 4:
+//                        return "b";
 
-    case 8:
-        return "”e‰¤";
+//                    case 5:
+//                        return "‰¹F";
 
-    case 9:
-        return "–‚pŽt";
+//                    case 6:
+//                        return "’žŽ™";
 
-    case 10:
-        return "’é‰¤";
+//                    case 7:
+//                        return "ŽÀ—ÍŽÒ";
 
-    case 11:
-        return "•sŽ€’¹";
+//                    case 8:
+//                        return "’T‹†ŽÒ";
 
-    case 12:
-        return "‘–¯“IƒAƒCƒhƒ‹";
+//                    case 9:
+//                        return "Œ¶‰e";
 
-    case 13:
-        return "”eŽÒ";
-}
+//                    case 10:
+//                        return "ˆîÈ";
+//                }
+//            }
+//        }
 
-//B‚ÌÌ†‚P`‚P‚T
-public int B;
-B = Random.Range(1, 16);
-switch (B)
-{
-    case 1:
-        return "“±Žt";
+//        if (point == 15000)
+//        {
+//            for (int i = 0; i < 1; i++)
+//            {
+//                B = Random.Range(1, 16);
+//                switch (B)
+//                {
+//                    case 1:
+//                        return "“±Žt";
 
-    case 2:
-        return "ŽçŒìŽÒ";
+//                    case 2:
+//                        return "ŽçŒìŽÒ";
 
-    case 3:
-        return "‹“¹ŽÒ";
+//                    case 3:
+//                        return "‹“¹ŽÒ";
 
-    case 4:
-        return "Šó–]";
+//                    case 4:
+//                        return "Šó–]";
 
-    case 5:
-        return "â–]";
+//                    case 5:
+//                        return "â–]";
 
-    case 6:
-        return "˜B‹àpŽt";
+//                    case 6:
+//                        return "˜B‹àpŽt";
 
-    case 7:
-        return "¸—ì";
+//                    case 7:
+//                        return "¸—ì";
 
-    case 8:
-        return "ˆ«–‚";
+//                    case 8:
+//                        return "ˆ«–‚";
 
-    case 9:
-        return "IŽÒ";
+//                    case 9:
+//                        return "IŽÒ";
 
-    case 10:
-        return "íŽm";
+//                    case 10:
+//                        return "íŽm";
 
-    case 11:
-        return "’´l";
+//                    case 11:
+//                        return "’´l";
 
-    case 12:
-        return "‹­ŽÒ";
+//                    case 12:
+//                        return "‹­ŽÒ";
 
-    case 13:
-        return "Žh‹q";
+//                    case 13:
+//                        return "Žh‹q";
 
-    case 14:
-        return "ˆê“™¯";
+//                    case 14:
+//                        return "ˆê“™¯";
 
-    case 15:
-        return "‰»g";
-}
+//                    case 15:
+//                        return "‰»g";
+//                }
+//            }
+//        }
 
-//C‚ÌÌ†‚P`‚P‚O
-public int C;
-C = Random.Range(1, 11);
-switch (C)
-{
-    case 1:
-        return "’§íŽÒ";
+//        if (point == 20000)
+//        {
+//            for (int i = 0; i < 1; i++)
+//            {
+//                A = Random.Range(1, 14);
+//                A‚ÌÌ†‚P`‚P‚R
+//                switch (A)
+//                {
+//                    case 1:
+//                        return "—EŽÒ";
 
-    case 2:
-        return "ŠwŽÒ";
+//                    case 2:
+//                        return "’´‰zŽÒ";
 
-    case 3:
-        return "‹AŠÒŽÒ";
+//                    case 3:
+//                        return "Œ«ŽÒ";
 
-    case 4:
-        return "b";
+//                    case 4:
+//                        return "Œ•¹";
 
-    case 5:
-        return "‰¹F";
+//                    case 5:
+//                        return "’²’âŽÒ";
 
-    case 6:
-        return "’žŽ™";
+//                    case 6:
+//                        return "¹‹RŽm";
 
-    case 7:
-        return "ŽÀ—ÍŽÒ";
+//                    case 7:
+//                        return "‘Â“VŽg";
 
-    case 8:
-        return "’T‹†ŽÒ";
+//                    case 8:
+//                        return "”e‰¤";
 
-    case 9:
-        return "Œ¶‰e";
+//                    case 9:
+//                        return "–‚pŽt";
 
-    case 10:
-        return "ˆîÈ";
-}
+//                    case 10:
+//                        return "’é‰¤";
 
-//D‚ÌÌ†‚P`‚W
-public int D;
-D = Random.Range(1, 9);
-switch (D)
-{
-    case 1:
-        return "–ÚŒ‚ŽÒ";
+//                    case 11:
+//                        return "•sŽ€’¹";
 
-    case 2:
-        return "V¯";
+//                    case 12:
+//                        return "‘–¯“IƒAƒCƒhƒ‹";
 
-    case 3:
-        return "•š•º";
+//                    case 13:
+//                        return "”eŽÒ";
+//                }
+//            }
+//        }
 
-    case 4:
-        return "Øl";
+//        if (point == 25000)
+//        {
+//            for (int i = 0; i < 1; i++)
+//            {
+//                S = Random.Range(1, 5);
+//                switch (S)
+//                {
+//                    case 1:
+//                        return "‘ÅŒ®‹@_";
 
-    case 5:
-        return "’T–KŽÒ";
+//                    case 2:
+//                        return "‘ÅŒ®—´_";
 
-    case 6:
-        return "ŽáŽÒ";
+//                    case 3:
+//                        return "‘ÅŒ®Ž×_";
 
-    case 7:
-        return "V•Ä";
-
-    case 8:
-        return "—ë";
-}
-
-//S‚ÌÌ†‚P`‚S
-public int S = 0;
-S = Random.Range(1, 5);
-switch (S)
-{
-    case 1:
-        return "‘ÅŒ®‹@_";
-
-    case 2:
-        return "‘ÅŒ®—´_";
-
-    case 3:
-        return "‘ÅŒ®Ž×_";
-
-    case 4:
-        return "‘ÅŒ®_";
-}
-   }
-}
+//                    case 4:
+//                        return "‘ÅŒ®_";
+//                }
+//            }
+//        }
+//    }
+//}
