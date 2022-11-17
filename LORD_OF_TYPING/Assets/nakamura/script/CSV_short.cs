@@ -14,7 +14,7 @@ public class CSV_short : MonoBehaviour
     void Start()
     {
         this.encoding = Encoding.GetEncoding("utf-8");
-        csvFile = Resources.Load("CSV_LORD_OF_TYPING_short_UTF-8") as TextAsset; // Resources‰º‚ÌCSV“Ç‚İ‚İ
+        csvFile = Resources.Load("CSV_LORD_OF_TYPING_shorthiragana_UTF-8") as TextAsset; // Resources‰º‚ÌCSV“Ç‚İ‚İ
         StringReader reader = new StringReader(csvFile.text);
 
         // , ‚Å•ªŠ„‚µ‚Â‚Âˆês‚¸‚Â“Ç‚İ‚İ

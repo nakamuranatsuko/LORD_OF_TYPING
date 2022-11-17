@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gauge: {fileID: 1521004049}
   gaugeTime: 30
-  input_success: 50
+  input_success: 15
   num: 0
   time: 0
 --- !u!1 &1553897119
@@ -1319,6 +1319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kanjiText: {fileID: 1723899830}
   huriganaText: {fileID: 1461262180}
+  scoreNum: 1000
   t_flg: 0
   firstflg: 0
   chanFlg: 0
@@ -1558,6 +1559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   csvFile: {fileID: 4900000, guid: 91a8528bcf397f645b68d867e0ba43e2, type: 3}
+  CSV_LORD_OF_TYPING: CSV_LORD_OF_TYPING_nomalhiragana_UTF-8
 --- !u!114 &1723899833
 MonoBehaviour:
   m_ObjectHideFlags: 0
