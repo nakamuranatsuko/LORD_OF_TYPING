@@ -793,7 +793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cad66cdf23365f944a1420271ab217a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c510933b4bce454d93b5754e640b7fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1559,7 +1559,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   csvFile: {fileID: 4900000, guid: 91a8528bcf397f645b68d867e0ba43e2, type: 3}
-  CSV_LORD_OF_TYPING: CSV_LORD_OF_TYPING_nomalhiragana_UTF-8
 --- !u!114 &1723899833
 MonoBehaviour:
   m_ObjectHideFlags: 0
